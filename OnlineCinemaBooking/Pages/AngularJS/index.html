@@ -1,0 +1,64 @@
+﻿<!DOCTYPE html>
+<html ng-app="cinemaApp" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Страница залаq</title>
+
+    <link href="../../Content/Styles/style.css" rel="stylesheet" />
+    
+</head>
+<body id="body" ng-controller="homeCtrl as ctrlHome">
+    <div class="container">
+        <div class="legend">
+
+            <div class="seat free"></div>
+            <div class="text free">свободно</div>
+
+            <div class="seat purchased"></div>
+            <div class="text purchased">куплено</div>
+
+            <div class="seat booked"></div>
+            <div class="text booked">забронировано</div>
+
+        </div>
+
+        <div class="wrapper">
+            
+            <div class="side rows">
+                <div class="caption left" ng-repeat="row in ctrlHome.rows">Ряд {{ctrlHome.rows.length - $index}}</div>
+            </div>
+            
+
+            <div class="center">
+                <div class="rows">
+                    <div class="row" ng-repeat="row in ctrlHome.rows"  data-row={{$index}}>
+                        <div class="{{seat.status | status}}" ng-repeat="seat in row" data-seat={{$index}} ng-click="select($event)">{{seat.name}}</div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="side rows">
+                <div class="caption right" ng-repeat="row in ctrlHome.rows">Ряд {{ctrlHome.rows.length - $index}}</div>
+            </div>
+        </div>
+
+
+
+
+
+
+        <div class="screen">Экран</div>
+        <div>
+            <button id="purchase-button" class="purchase-button" ng-click="purchase()">Купить</button>
+        </div>
+    </div>
+
+
+    <script src="../../Scripts/libs/angular.js"></script>
+    <script src="../../Scripts/AngularJS/cinema.service.js"></script>
+    <script src="../../Scripts/AngularJS/filters.js"></script>
+    <script src="../../Scripts/AngularJS/cinema.controller.js"></script>
+
+
+</body>
+</html>

@@ -1,0 +1,165 @@
+﻿
+.container {
+	background-color: #F8F8FF;
+	width: 820px;
+	margin: auto;
+	border-top-left-radius: 7px;
+	border-top-right-radius: 7px;
+	border-bottom-left-radius: 20px;
+	border-bottom-right-radius: 20px;
+	border-bottom: 1px solid #FFF5EE;
+	border-top: 1px solid #FFF5EE;
+}
+
+.screen {
+	background-color: grey;
+	width: 380px;
+	height: 20px;
+	text-align: center;
+	margin: auto;
+	border-bottom-left-radius: 20px;
+	border-bottom-right-radius: 20px;
+}
+
+/*Стили для контейнера содержащего места и ряды*/
+.wrapper {
+	/*background-color: lightblue;*/
+	margin-bottom: 30px;
+	border-radius: 5px;
+	overflow: auto;
+}
+
+/*стили боковых панелей*/
+.side.rows {
+	background-color: lightcyan;
+	width: 12%;
+	border-radius: 2px;
+	float: left;
+}
+
+
+/*стили названий рядов*/
+.caption {
+	background-color: #33CC99;
+	width: 60%;
+	margin-top: 12px;
+	line-height: 30px;
+	text-align: center;
+	border-radius: 5px;
+}
+
+	.caption.left {
+		border-top-right-radius: 15px;
+		border-bottom-right-radius: 15px;
+	}
+
+	.caption.right {
+		margin-left: 39px;
+		border-top-left-radius: 15px;
+		border-bottom-left-radius: 15px;
+	}
+
+
+
+/*стили контейнера содержащего места*/
+.center {
+	width: 76%;
+	float: left;
+}
+
+	/*стили рядов с местами в холле*/
+
+	.center .rows {
+		
+	}
+
+.row {
+	text-align: center;
+}
+
+/*стиль для мест*/
+.seat {
+	background-color: #3366CC;
+	width: 30px;
+	height: 30px;
+	border-radius: 5px;
+}
+
+.center .seat {
+	text-align: center;
+	height: 23px;
+	padding-top: 7px;
+	display: inline-block;
+	margin: 12px 0 0px 10px;
+}
+
+	.center .seat.purchased {
+		background-color: #B22222;
+	}
+
+	.center .seat.booked {
+		background-color: #696969;
+	}
+	.center .seat.selected {
+	background-color:#CECECE;
+}
+/*стили блока с информацией о цветах мест*/
+
+.legend {
+	background-color: #add8e6;
+	margin-bottom: 10px;
+	border-radius: 5px;
+	height: 30px;
+}
+
+	.legend .seat {
+		float: left;
+	}
+
+		.legend .seat.free {
+			margin: 0 0 0 230px;
+		}
+
+		.legend .seat.purchased {
+			background-color: #B22222;
+			margin: 0 0 0 50px;
+		}
+
+		.legend .seat.booked {
+			background-color: #696969;
+			margin: 0 0 0 56px;
+		}
+
+	/*стили расположения текста легенды*/
+	.legend .text {
+		float: left;
+		margin-top: 5px;
+	}
+
+		.legend .text.free {
+			margin-left: 4px;
+		}
+
+		.legend .text.purchased {
+			margin-left: 4px;
+		}
+
+		.legend .text.booked {
+			margin-left: 4px;
+		}
+
+ .purchase-button {
+	width: 200px;
+	height: 40px;
+	text-align: center;
+	border-width: 1px;
+	overflow: hidden;
+	margin: 50px 0 10px 319px;
+	font-size: 10pt;
+	font-weight: bold;
+	background-color: #add8e6;
+	border-radius: 6px;
+}
+.center .seat:hover {
+	background-color: #00CC33;
+}
